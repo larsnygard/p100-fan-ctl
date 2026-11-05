@@ -1,0 +1,13 @@
+[Unit]
+Description=Auto fan controller for P100 GPU
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /usr/local/bin/auto_fan.py
+Restart=always
+RestartSec=3
+User=root
+
+[Install]
+WantedBy=multi-user.target
+
