@@ -1,0 +1,12 @@
+[Unit]
+Description=P100 Fan Curve Controller
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/p100-fan.sh
+Restart=always
+RestartSec=2
+
+[Install]
+WantedBy=multi-user.target
+
